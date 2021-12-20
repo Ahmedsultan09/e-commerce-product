@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <title>E-commerce product page</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="all.min.css">
+  <link rel="stylesheet" href="normalize.css">
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <!-- navbar -->
+    <nav>
+      <div class="left-side">
+        <div class="logo">
+          <img src="/images/logo.svg" alt="">
+        </div>
+        <div class="links">
+          <ul>
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="right-side">
+        <!--  -->
+        <div class="cart-icon">
+          <i class="fas fa-shopping-cart cart"></i>
+          <!-- popup -->
+          <div class="popup-cart">
+            <div class="cart-info">
+              <p>Cart</p>
+            </div>
+            <div class="cart-element">
+              <div class="element-details">
+                <!-- <p class="empty-cart">Your cart is empty</p> -->
+              </div>
+            </div>
+
+
+            <!-- end of popup -->
+          </div>
+          <!--  -->
+          <div class="person-icon"><img src="/images/person-icon.jpeg" alt=""></div>
+        </div>
+    </nav>
+    <!-- End of navbar -->
+    <!-- Content -->
+    <div class="content container">
+      <div class="left-side">
+        <div class="main-img">
+          <img src="/images/image-product-1.jpg" alt="">
+        </div>
+        <div class="thumbnails">
+          <img src="/images/image-product-1.jpg" alt="">
+          <img src="/images/image-product-2.jpg" alt="">
+          <img src="/images/image-product-3.jpg" alt="">
+          <img src="/images/image-product-4.jpg" alt="">
+        </div>
+      </div>
+      <div class="right-side">
+        <p id='company-name'>SNEAKERS COMPANY</p>
+        <h2>Fall Limited Edition Sneakers</h2>
+        <p id='product-disc'>These low-profile sneakers are your perfect casual wear companion. featuring a durable
+          rubber outer sole,
+          they'll withstand everything the weather can offer.</p>
+        <div class="price">
+          <h3>$125.00</h3>
+          <div class="sale">50%</div>
+        </div>
+        <p id='old-price'>$250.00</p>
+        <div class="checkout">
+          <div class="amount">
+            <button id='minus'>-</button>
+            <p id='counter'>1</p>
+            <button id='plus'>+</button>
+          </div>
+          <div class="add-to-cart">
+            <button><i class="fas fa-shopping-cart cart"></i>Add to cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>

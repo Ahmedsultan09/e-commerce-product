@@ -1,0 +1,50 @@
+<div class="cart-element">
+    <div class="element-details">
+        <img src="/images/image-product-1.jpg" alt="">
+        <p class="cart-product-disc">Fall Limited Edition Sneakers</p>
+        <button id='trash'><i class="far fa-trash-alt"></i></button>
+    </div>
+    <button class="cart-checkout">Checkout</button>
+</div>
+
+
+
+let cartDiv = document.querySelector('.cart-element');
+let emptyCart = document.querySelector('.empty-cart')
+let addToCartBtn = document.querySelector('.add-to-cart button')
+
+let productDetails = {
+productName: 'Fall Limited Edition Sneakers',
+amount: counter.innerHTML,
+price: counter.innerHTML * 125,
+productImage: mainImg.getAttribute('src')
+}
+
+addToCartBtn.addEventListener('click', function (e) {
+emptyCart.style.display = 'none'
+let elementDetails = document.createElement('div');
+elementDetails.classList.add('element-details')
+cartDiv.appendChild(elementDetails);
+// img
+let cartImage = document.createElement('img');
+cartImage.setAttribute('src', '/images/image-product-1.jpg')
+elementDetails.appendChild(cartImage)
+// p
+let productTitle = document.createElement('p')
+productTitle.classList.add('cart-product-disc');
+productTitle.innerHTML = productDetails.productName + `$${productDetails.price}`;
+elementDetails.appendChild(productTitle)
+// trash button
+let deleteBtn = document.createElement('button');
+let deleteIcon = document.createElement('i');
+deleteIcon.setAttribute('class', 'far fa-trash-alt')
+deleteBtn.appendChild(deleteIcon);
+deleteBtn.id = 'trash'
+elementDetails.appendChild(deleteBtn);
+// Check out button
+let CheckoutBtn = document.createElement('button');
+CheckoutBtn.classList.add('cart-checkout');
+CheckoutBtn.innerHTML = 'Checkout';
+cartDiv.appendChild(CheckoutBtn)
+
+})
